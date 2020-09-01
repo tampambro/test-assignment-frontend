@@ -1,0 +1,38 @@
+.img-container {
+  width: 308px;
+  height: 315px;
+  overflow: hidden;
+  padding: 8px;
+  margin: 11px;
+   img {
+     width: 100%;
+  }
+}
+
+.unordered {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+    p {
+      position: absolute;
+      top: 5px;
+    }
+}
+
+div[id^="tag"] {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 10px 20px 10px;
+  border: 1px solid #dee2e6;
+  border-radius: .25rem;
+  margin-bottom: 10px;
+    p {
+      position: absolute;
+      top: 10px;
+      margin-left: 12px;
+    }
+}

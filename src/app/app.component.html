@@ -1,0 +1,54 @@
+<div class="container">
+  <form>
+    <br />
+    <div class="form-group">
+      <input
+        class="form-control"
+        placeholder="введите тег"
+        id="tagForSearch"
+        [value]="TAG"
+        #tagForSearch
+      />
+      <button
+        class="btn btn-success"
+        (click)="searchTag(tagForSearch.value)"
+      >
+        Загрузить
+      </button>
+      <button
+        class="btn btn-danger"
+        (click)="clear()"
+      >
+        Очистить
+      </button>
+      <button
+        class="btn btn-primary"
+        (click)="group()"
+      >
+        Группировать
+      </button>
+    </div>
+  </form>
+
+  <app-hint></app-hint>
+
+  <div
+    id="imgDisplay"
+    class="unordered"
+    *ngIf="response"
+  >
+    <div
+      class="img-container img-thumbnail"
+      *ngFor="let img of imgArr"
+    >
+      <img
+        src="{{img[0]}}"
+        alt="{{img[1]}}"
+        (click)="copyTag($event)"
+      />
+    </div>
+  </div>
+
+</div>
+
+
